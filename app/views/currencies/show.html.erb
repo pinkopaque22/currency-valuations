@@ -1,0 +1,10 @@
+<h1>Values of Currencies</h1>
+  <a class= "btn btn-primary" href=<%= currency_path('BRL') %> role="button">BRL</a>
+  <a class= "btn btn-primary" href=<%= currency_path('BRL') %> role="button">EUR</a>
+  <a class= "btn btn-primary" href=<%= currency_path('BRL') %> role="button">USD</a>
+  <%= link_to_if(params[:id], “Graph of #{params[:id]}”, “https://en.wikipedia.org/wiki/#{params[:id]}") %>
+    <% if params[:id] %>
+    <h3> Graph of <%= link_to("#{params[:id]}", "https://en.wikipedia.org/wiki/#{params[:id]}") %> </h3>
+    <% else %>
+    <h3> Choose a currency please: >/h3>
+    <% end %>
