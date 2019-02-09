@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <div class='page-header'>
+    <h1> Valuation of Currencies</h1>
+    </div>
     <title>CurrencyValuation</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
   </head>
 
   <body>
+    <div class="container">
+    <%= yield %>
+    </div>
+    <div class="btn-toolbar" style="display: flex; margin-top: 15px;">
+      <div style="margin: auto;">
+        <a class="btn btn-success" href=<%= currency_path('BRL') %> role="button">BRL</a>
+        <a class="btn btn-success" href=<%= currency_path('EUR') %> role="button">EUR</a>
+        <a class="btn btn-success" href=<%= currency_path('USD') %> role="button">USD</a>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
